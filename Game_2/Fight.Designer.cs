@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fight));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.kickBTN = new System.Windows.Forms.Button();
             this.punchBTN = new System.Windows.Forms.Button();
@@ -40,6 +41,7 @@
             this.pHealthPBX = new System.Windows.Forms.PictureBox();
             this.bHBack = new System.Windows.Forms.PictureBox();
             this.pHBack = new System.Windows.Forms.PictureBox();
+            this.music = new AxWMPLib.AxWindowsMediaPlayer();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bHealthPBX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -47,6 +49,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pHealthPBX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bHBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.music)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -175,12 +178,23 @@
             this.pHBack.TabIndex = 9;
             this.pHBack.TabStop = false;
             // 
+            // music
+            // 
+            this.music.Enabled = true;
+            this.music.Location = new System.Drawing.Point(354, 144);
+            this.music.Name = "music";
+            this.music.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("music.OcxState")));
+            this.music.Size = new System.Drawing.Size(75, 23);
+            this.music.TabIndex = 10;
+            this.music.Visible = false;
+            // 
             // Fight
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.music);
             this.Controls.Add(this.pHL);
             this.Controls.Add(this.pHealthPBX);
             this.Controls.Add(this.bHL);
@@ -200,6 +214,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pHealthPBX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bHBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.music)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,5 +234,6 @@
         private System.Windows.Forms.PictureBox pHealthPBX;
         private System.Windows.Forms.PictureBox bHBack;
         private System.Windows.Forms.PictureBox pHBack;
+        private AxWMPLib.AxWindowsMediaPlayer music;
     }
 }

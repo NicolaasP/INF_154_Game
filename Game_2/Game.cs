@@ -14,7 +14,21 @@ namespace Game_2
     {
         public Game()
         {
+
             InitializeComponent();
+            load();
+        }
+
+        private void load()
+        {
+            mediaPlayer.URL = "Sounds\\music\\Game.wav";
+            mediaPlayer.settings.setMode("loop", true);
+            mediaPlayer.Ctlcontrols.play();
+            this.Text = "Game";
+            step.Load();
+            bump.Load();
+            music.LoadAsync();
+            music.Play();
             brewstor.Size = new Size(bXSize, bYSize);
             enemy.Size = new Size(eXSize, eYSize);
             levelupPBX.Size = new Size(lXSize, lYSize);
@@ -44,6 +58,8 @@ namespace Game_2
 
         private void moveB(KeyEventArgs e)
         {
+            step.Load();
+            bump.Load();
             moveE();
             int bX = brewstor.Location.X, bY = brewstor.Location.Y;
             switch (e.KeyCode.ToString())
@@ -61,7 +77,6 @@ namespace Game_2
                     bX += bVel;
                     break;
                 case "F3":
-                    lives.Visible = !lives.Visible;
                     break;
             }
                 
@@ -71,10 +86,15 @@ namespace Game_2
             foreach (Label l in labels) if (hit(brewstor, l)) tree = true;
             if (!tree)
             {
+                step.Play();
                 pBX = bX;
                 pBY = bY;
             }
-            else brewstor.Location = new Point(clamp(pBX, minX, maxX), clamp(pBY, minY, maxY));
+            else
+            {
+                bump.Play();
+                brewstor.Location = new Point(clamp(pBX, minX, maxX), clamp(pBY, minY, maxY));
+            }
             if (hit(brewstor, enemy)) fight();
             levelUp();
             if (levelupspawned && hit(brewstor, levelupPBX)) gotLevel();
@@ -83,6 +103,7 @@ namespace Game_2
 
         private void fight()
         {
+            mediaPlayer.Ctlcontrols.stop();
             liv--;
             lives.Text = "Lives: " + liv;
             if(liv <= 0)
@@ -149,6 +170,19 @@ namespace Game_2
             return Var;
         }
 
+
+        private void Game_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Game_KeyDown(object sender, KeyEventArgs e)
+        {
+            moveB(e);
+        }
+
+        public Form ms { get; set; }
+
         private const int minY = 0,
             maxY = 650,
             minX = 0, //1220, 650
@@ -170,19 +204,8 @@ namespace Game_2
         private int levelval = new Random().Next(0, 10);
         private bool levelupspawned = false;
         private Label[] labels = new Label[17];
-
-
-
-        private void Game_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Game_KeyDown(object sender, KeyEventArgs e)
-        {
-            moveB(e);
-        }
-
-        public Form ms { get; set; }
+        private System.Media.SoundPlayer step = new System.Media.SoundPlayer("Sounds\\effects\\Footstep.wav");
+        private System.Media.SoundPlayer bump = new System.Media.SoundPlayer("Sounds\\effects\\hit.wav");
+        private System.Media.SoundPlayer music = new System.Media.SoundPlayer("Sounds\\music\\Game.wav");
     }
 }

@@ -12,10 +12,12 @@ namespace Game_2
         {
             InitializeComponent();
             Init(level);
+
         }
 
         private void Init(int level)
         {
+            music.settings.setMode("loop", true);
             this.bHealth = level * 100;
             l = level;
             damageMul *= (level * 25);
@@ -32,16 +34,20 @@ namespace Game_2
 
         public Form game { get; set; }
         private int damageMul = 1, pHealth = 400, bHealth = 0, pDam = 50, l = 0;
+        private System.Media.SoundPlayer win = new System.Media.SoundPlayer("Sounds\\effects\\win.wav");
+        private System.Media.SoundPlayer attack = new System.Media.SoundPlayer("Sounds\\effects\\fight.wav");
+
 
         private void Fight_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
+            music.Ctlcontrols.stop();
         }
 
         private void fight(int opt)
         {
             int pualineChoice = new Random().Next(0, 3);
             String message = "";
+            attack.Play();
             switch (pualineChoice)
             {
                 case 0:
@@ -98,6 +104,8 @@ namespace Game_2
             }
             else if (pHealth <= 0)
             {
+                music.Ctlcontrols.stop();
+                win.Play();
                 new Wincs().Show();
                 this.Dispose();
             }

@@ -12,10 +12,12 @@ namespace Game_2
 {
     public partial class Form1 : Form
     {
+        private System.Media.SoundPlayer music = new System.Media.SoundPlayer("Sounds\\music\\Our-Mountain_v003_Looping.wav");
         public Form1()
         {
             InitializeComponent();
-            
+            this.Text = "Main Menu";
+            music.PlayLooping();
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -23,6 +25,7 @@ namespace Game_2
             Game f = new Game();
             f.ms = this;
             this.Visible = false;
+            music.Stop();
             f.Show();
         }
     }

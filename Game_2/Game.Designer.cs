@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             this.lives = new System.Windows.Forms.Label();
             this.tree = new System.Windows.Forms.Label();
             this.brewstor = new System.Windows.Forms.Label();
@@ -49,6 +50,8 @@
             this.tree14 = new System.Windows.Forms.Label();
             this.tree15 = new System.Windows.Forms.Label();
             this.tree16 = new System.Windows.Forms.Label();
+            this.mediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
+            ((System.ComponentModel.ISupportInitialize)(this.mediaPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // lives
@@ -242,6 +245,16 @@
             this.tree16.Size = new System.Drawing.Size(64, 97);
             this.tree16.TabIndex = 24;
             // 
+            // mediaPlayer
+            // 
+            this.mediaPlayer.Enabled = true;
+            this.mediaPlayer.Location = new System.Drawing.Point(601, 40);
+            this.mediaPlayer.Name = "mediaPlayer";
+            this.mediaPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("mediaPlayer.OcxState")));
+            this.mediaPlayer.Size = new System.Drawing.Size(75, 23);
+            this.mediaPlayer.TabIndex = 25;
+            this.mediaPlayer.Visible = false;
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -249,6 +262,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::Game_2.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(1280, 721);
+            this.Controls.Add(this.mediaPlayer);
             this.Controls.Add(this.brewstor);
             this.Controls.Add(this.enemy);
             this.Controls.Add(this.levelupPBX);
@@ -275,6 +289,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Game_FormClosing);
             this.Load += new System.EventHandler(this.Game_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Game_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.mediaPlayer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -302,5 +317,6 @@
         private System.Windows.Forms.Label tree14;
         private System.Windows.Forms.Label tree15;
         private System.Windows.Forms.Label tree16;
+        private AxWMPLib.AxWindowsMediaPlayer mediaPlayer;
     }
 }
