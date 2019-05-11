@@ -162,7 +162,7 @@ namespace Game_2
             bVel = 10,
             eVel = 5;
 
-        public int level = 1,
+        public int level = 4,
             liv = 3,
             pBX = 0,
             pBY = 0;

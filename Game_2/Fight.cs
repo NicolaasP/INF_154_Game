@@ -96,7 +96,11 @@ namespace Game_2
                 MessageBox.Show("You Died");
                 ret();
             }
-            else if (pHealth <= 0) MessageBox.Show("You Saved Marius!");
+            else if (pHealth <= 0)
+            {
+                new Wincs().Show();
+                this.Dispose();
+            }
         }
 
         private void draw()
