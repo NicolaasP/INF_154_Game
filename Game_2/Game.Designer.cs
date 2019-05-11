@@ -286,6 +286,7 @@
             this.Controls.Add(this.lives);
             this.Name = "Game";
             this.Text = "Game";
+            this.Activated += new System.EventHandler(this.Game_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Game_FormClosing);
             this.Load += new System.EventHandler(this.Game_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Game_KeyDown);

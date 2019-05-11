@@ -14,7 +14,6 @@ namespace Game_2
     {
         public Game()
         {
-
             InitializeComponent();
             load();
         }
@@ -173,7 +172,6 @@ namespace Game_2
 
         private void Game_Load(object sender, EventArgs e)
         {
-
         }
 
         private void Game_KeyDown(object sender, KeyEventArgs e)
@@ -195,6 +193,13 @@ namespace Game_2
             lYSize = 90,
             bVel = 10,
             eVel = 5;
+
+        private void Game_Activated(object sender, EventArgs e)
+        {
+            mediaPlayer.URL = "Sounds\\music\\Game.wav";
+            mediaPlayer.settings.setMode("loop", true);
+            mediaPlayer.Ctlcontrols.play();
+        }
 
         public int level = 4,
             liv = 3,
