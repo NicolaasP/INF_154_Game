@@ -77,7 +77,7 @@
             // 
             this.brewstor.BackColor = System.Drawing.Color.Transparent;
             this.brewstor.Image = global::Game_2.Properties.Resources.brewstor1;
-            this.brewstor.Location = new System.Drawing.Point(212, 120);
+            this.brewstor.Location = new System.Drawing.Point(210, 120);
             this.brewstor.Name = "brewstor";
             this.brewstor.Size = new System.Drawing.Size(60, 81);
             this.brewstor.TabIndex = 6;
@@ -86,7 +86,7 @@
             // 
             this.enemy.BackColor = System.Drawing.Color.Transparent;
             this.enemy.Image = global::Game_2.Properties.Resources.Pauline_sprite1;
-            this.enemy.Location = new System.Drawing.Point(1052, 386);
+            this.enemy.Location = new System.Drawing.Point(1050, 380);
             this.enemy.Name = "enemy";
             this.enemy.Size = new System.Drawing.Size(44, 76);
             this.enemy.TabIndex = 7;

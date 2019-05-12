@@ -144,7 +144,7 @@ namespace Game_2
         private void levelUp()
         {
             Random r = new Random();
-            int ran = r.Next(1, (level * 10));
+            int ran = r.Next(1, (level * chance));
             if (ran == levelval && !levelupspawned && level < 4)
             {
                 levelupPBX.Location = new Point(r.Next(minX, maxX), r.Next(minY, maxY));
@@ -201,12 +201,12 @@ namespace Game_2
             mediaPlayer.Ctlcontrols.play();
         }
 
-        public int level = 4,
+        public int level = 1,
             liv = 3,
             pBX = 0,
             pBY = 0;
-
-        private int levelval = new Random().Next(0, 10);
+        private int chance = 100;
+        private int levelval = new Random().Next(0, 100); // top has to = chance
         private bool levelupspawned = false;
         private Label[] labels = new Label[17];
         private System.Media.SoundPlayer step = new System.Media.SoundPlayer("Sounds\\effects\\Footstep.wav");
