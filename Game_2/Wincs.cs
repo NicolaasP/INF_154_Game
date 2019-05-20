@@ -16,7 +16,7 @@ namespace Game_2
         {
             InitializeComponent();
             this.Text = "You Won!!!";
-            MessageBox.Show("You Saved...");
+            MessageBox.Show("You Saved the princess!!");
         }
 
         private void WinBTN_Click(object sender, EventArgs e)

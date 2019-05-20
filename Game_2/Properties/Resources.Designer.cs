@@ -73,9 +73,9 @@ namespace Game_2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap brewstor {
+        internal static System.Drawing.Bitmap dragon {
             get {
-                object obj = ResourceManager.GetObject("brewstor", resourceCulture);
+                object obj = ResourceManager.GetObject("dragon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace Game_2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap brewstor_fight {
+        internal static System.Drawing.Bitmap dragon_fight {
             get {
-                object obj = ResourceManager.GetObject("brewstor-fight", resourceCulture);
+                object obj = ResourceManager.GetObject("dragon_fight", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,19 @@ namespace Game_2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap brewstor1 {
+        internal static System.Drawing.Bitmap Knight {
             get {
-                object obj = ResourceManager.GetObject("brewstor1", resourceCulture);
+                object obj = ResourceManager.GetObject("Knight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap knight_fight {
+            get {
+                object obj = ResourceManager.GetObject("knight_fight", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,59 +123,9 @@ namespace Game_2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap main_menu_bg {
+        internal static System.Drawing.Bitmap mainScreen {
             get {
-                object obj = ResourceManager.GetObject("main-menu-bg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap pauline {
-            get {
-                object obj = ResourceManager.GetObject("pauline", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap pauline_fight {
-            get {
-                object obj = ResourceManager.GetObject("pauline-fight", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Pauline_sprite {
-            get {
-                object obj = ResourceManager.GetObject("Pauline-sprite", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Pauline_sprite1 {
-            get {
-                object obj = ResourceManager.GetObject("Pauline-sprite1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap tree {
-            get {
-                object obj = ResourceManager.GetObject("tree", resourceCulture);
+                object obj = ResourceManager.GetObject("mainScreen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

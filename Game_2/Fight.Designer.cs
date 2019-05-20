@@ -34,22 +34,22 @@
             this.punchBTN = new System.Windows.Forms.Button();
             this.BlockBTN = new System.Windows.Forms.Button();
             this.bHL = new System.Windows.Forms.Label();
+            this.pHL = new System.Windows.Forms.Label();
+            this.music = new AxWMPLib.AxWindowsMediaPlayer();
+            this.pHealthPBX = new System.Windows.Forms.PictureBox();
             this.bHealthPBX = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pHL = new System.Windows.Forms.Label();
-            this.pHealthPBX = new System.Windows.Forms.PictureBox();
             this.bHBack = new System.Windows.Forms.PictureBox();
             this.pHBack = new System.Windows.Forms.PictureBox();
-            this.music = new AxWMPLib.AxWindowsMediaPlayer();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.music)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pHealthPBX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bHealthPBX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pHealthPBX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bHBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHBack)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.music)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -115,6 +115,34 @@
             this.bHL.TabIndex = 4;
             this.bHL.Text = "Brewstor Health: ";
             // 
+            // pHL
+            // 
+            this.pHL.AutoSize = true;
+            this.pHL.BackColor = System.Drawing.Color.Transparent;
+            this.pHL.Location = new System.Drawing.Point(878, 0);
+            this.pHL.Name = "pHL";
+            this.pHL.Size = new System.Drawing.Size(100, 13);
+            this.pHL.TabIndex = 7;
+            this.pHL.Text = "Pauline Health: 400";
+            // 
+            // music
+            // 
+            this.music.Enabled = true;
+            this.music.Location = new System.Drawing.Point(354, 144);
+            this.music.Name = "music";
+            this.music.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("music.OcxState")));
+            this.music.Size = new System.Drawing.Size(75, 23);
+            this.music.TabIndex = 10;
+            this.music.Visible = false;
+            // 
+            // pHealthPBX
+            // 
+            this.pHealthPBX.Location = new System.Drawing.Point(584, 16);
+            this.pHealthPBX.Name = "pHealthPBX";
+            this.pHealthPBX.Size = new System.Drawing.Size(400, 30);
+            this.pHealthPBX.TabIndex = 6;
+            this.pHealthPBX.TabStop = false;
+            // 
             // bHealthPBX
             // 
             this.bHealthPBX.Location = new System.Drawing.Point(1, 16);
@@ -126,7 +154,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = global::Game_2.Properties.Resources.brewstor_fight;
+            this.pictureBox1.Image = global::Game_2.Properties.Resources.knight_fight;
             this.pictureBox1.Location = new System.Drawing.Point(1, 119);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(250, 221);
@@ -135,30 +163,12 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Game_2.Properties.Resources.pauline_fight;
+            this.pictureBox2.Image = global::Game_2.Properties.Resources.dragon_fight;
             this.pictureBox2.Location = new System.Drawing.Point(728, 56);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(250, 273);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
-            // 
-            // pHL
-            // 
-            this.pHL.AutoSize = true;
-            this.pHL.BackColor = System.Drawing.Color.Transparent;
-            this.pHL.Location = new System.Drawing.Point(878, 0);
-            this.pHL.Name = "pHL";
-            this.pHL.Size = new System.Drawing.Size(100, 13);
-            this.pHL.TabIndex = 7;
-            this.pHL.Text = "Pauline Health: 400";
-            // 
-            // pHealthPBX
-            // 
-            this.pHealthPBX.Location = new System.Drawing.Point(584, 16);
-            this.pHealthPBX.Name = "pHealthPBX";
-            this.pHealthPBX.Size = new System.Drawing.Size(400, 30);
-            this.pHealthPBX.TabIndex = 6;
-            this.pHealthPBX.TabStop = false;
             // 
             // bHBack
             // 
@@ -177,16 +187,6 @@
             this.pHBack.Size = new System.Drawing.Size(400, 30);
             this.pHBack.TabIndex = 9;
             this.pHBack.TabStop = false;
-            // 
-            // music
-            // 
-            this.music.Enabled = true;
-            this.music.Location = new System.Drawing.Point(354, 144);
-            this.music.Name = "music";
-            this.music.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("music.OcxState")));
-            this.music.Size = new System.Drawing.Size(75, 23);
-            this.music.TabIndex = 10;
-            this.music.Visible = false;
             // 
             // Fight
             // 
@@ -208,13 +208,13 @@
             this.Text = "Fight";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Fight_FormClosing);
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.music)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pHealthPBX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bHealthPBX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pHealthPBX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bHBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHBack)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.music)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

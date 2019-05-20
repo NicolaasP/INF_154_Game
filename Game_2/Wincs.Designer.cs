@@ -37,7 +37,7 @@
             this.winBTN.Name = "winBTN";
             this.winBTN.Size = new System.Drawing.Size(75, 23);
             this.winBTN.TabIndex = 0;
-            this.winBTN.Text = "Done";
+            this.winBTN.Text = "Exit";
             this.winBTN.UseVisualStyleBackColor = true;
             this.winBTN.Click += new System.EventHandler(this.WinBTN_Click);
             // 

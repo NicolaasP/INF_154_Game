@@ -159,5 +159,23 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainScreen.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Knight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dragon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\knight_fight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pauline_fight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dragon_fight.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
