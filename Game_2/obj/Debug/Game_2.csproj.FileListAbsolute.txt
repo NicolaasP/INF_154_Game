@@ -28,3 +28,4 @@ C:\Users\Nicolaas\Documents\INF_154_Game\Game_2\bin\Debug\AxInterop.WMPLib.dll
 C:\Users\Nicolaas\Documents\INF_154_Game\Game_2\obj\Debug\Interop.WMPLib.dll
 C:\Users\Nicolaas\Documents\INF_154_Game\Game_2\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\Nicolaas\Documents\INF_154_Game\Game_2\obj\Debug\Game_2.csproj.ResolveComReference.cache
+C:\Users\Nicolaas\Documents\INF_154_Game\Game_2\obj\Debug\Game_2.Help.resources

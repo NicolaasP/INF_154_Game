@@ -111,9 +111,10 @@
             this.bHL.BackColor = System.Drawing.Color.Transparent;
             this.bHL.Location = new System.Drawing.Point(-2, 0);
             this.bHL.Name = "bHL";
-            this.bHL.Size = new System.Drawing.Size(88, 13);
+            this.bHL.Size = new System.Drawing.Size(77, 13);
             this.bHL.TabIndex = 4;
-            this.bHL.Text = "Brewstor Health: ";
+            this.bHL.Text = "Knight Health: ";
+            this.bHL.Click += new System.EventHandler(this.BHL_Click);
             // 
             // pHL
             // 
@@ -123,7 +124,7 @@
             this.pHL.Name = "pHL";
             this.pHL.Size = new System.Drawing.Size(100, 13);
             this.pHL.TabIndex = 7;
-            this.pHL.Text = "Pauline Health: 400";
+            this.pHL.Text = "Dragon Health: 400";
             // 
             // music
             // 

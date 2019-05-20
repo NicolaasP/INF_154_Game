@@ -28,5 +28,14 @@ namespace Game_2
             music.Stop();
             f.Show();
         }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            Help h = new Help();
+            h.ms = this;
+            this.Visible = false;
+            music.Stop();
+            h.Show();
+        }
     }
 }

@@ -105,17 +105,20 @@ namespace Game_2
             mediaPlayer.Ctlcontrols.stop();
             liv--;
             lives.Text = "Lives: " + liv;
-            if(liv <= 0)
+            if (liv < 0)
             {
-                MessageBox.Show("Game Over");
                 ms.Show();
                 this.Hide();
+                MessageBox.Show("Game Over");
             }
-            Fight f = new Fight(level);
-            f.game = this;
-            this.Visible = false;
-            f.Show();
-            enemy.Location = new Point(brewstor.Location.X, (brewstor.Location.Y + bYSize + 40));
+            else
+            {
+                Fight f = new Fight(level);
+                f.game = this;
+                this.Visible = false;
+                f.Show();
+                enemy.Location = new Point(brewstor.Location.X, (brewstor.Location.Y + bYSize + 40));
+            }
         }
 
         private void gotLevel()

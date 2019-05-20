@@ -21,7 +21,7 @@ namespace Game_2
             this.bHealth = level * 100;
             l = level;
             damageMul *= (level * 25);
-            bHL.Text = "Brewstor Health: " + this.bHealth;
+            bHL.Text = "Knight Health: " + this.bHealth;
             bHealthPBX.Size = new Size(this.bHealth, 30);
             bHealthPBX.BackColor = Color.Green;
             bHBack.Size = new Size(bHealth, 30);
@@ -51,45 +51,45 @@ namespace Game_2
             switch (pualineChoice)
             {
                 case 0:
-                    message += "Pauline used \"Block\"\n";
-                    if (opt == 0) message += "Brewstor used \"Block\"\nNo Damage";
-                    else if (opt == 1) message += "Brewstor used \"Punch\"\nNo Damage";
+                    message += "Dragon used \"Block\"\n";
+                    if (opt == 0) message += "Knight used \"Block\"\nNo Damage";
+                    else if (opt == 1) message += "Knight used \"Punch\"\nNo Damage";
                     else
                     {
-                        message += "Brewstor used \"Kick\"\n" + damageMul + " Damage to Pauline";
+                        message += "Knight used \"Kick\"\n" + damageMul + " Damage to Dragon";
                         damageP();
                     }
                     break;
                 case 1:
-                    message += "Pauline used \"Punch\"\n";
-                    if (opt == 0) message += "Brewstor used \"Block\"\nNo Damage";
+                    message += "Dragon used \"Punch\"\n";
+                    if (opt == 0) message += "Knight used \"Block\"\nNo Damage";
                     else if (opt == 1)
                     {
-                        message += "Brewstor used \"Punch\"\n" + pDam + " to Brewstor\n" + damageMul + " to Pualine";
+                        message += "Knight used \"Punch\"\n" + pDam + " to Knight\n" + damageMul + " to Pualine";
                         damageB();
                         damageP();
                     }
                     else
                     {
-                        message += "Brewstor used \"Kick\"\n" + pDam + " Damage to Brewstor";
+                        message += "Knight used \"Kick\"\n" + pDam + " Damage to Knight";
                         damageB();
                     }
                     break;
                 case 2:
-                    message += "Pauline used \"Kick\"\n";
+                    message += "Dragon used \"Kick\"\n";
                     if (opt == 0)
                     {
-                        message += "Brewstor used \"Block\"\n" + pDam + " Damage to Brewstor";
+                        message += "Knight used \"Block\"\n" + pDam + " Damage to Knight";
                         damageB();
                     }
                     else if (opt == 1)
                     {
-                        message += "Brewstor used \"Punch\"\n" + damageMul + " to Pauline";
+                        message += "Knight used \"Punch\"\n" + damageMul + " to Dragon";
                         damageP();
                     }
                     else
                     {
-                        message += "Brewstor used \"Kick\"\n" + pDam + " to Brewstor\n" + damageMul + " to Pualine";
+                        message += "Knight used \"Kick\"\n" + pDam + " to Knight\n" + damageMul + " to Pualine";
                         damageB();
                         damageP();
                     }
@@ -122,7 +122,7 @@ namespace Game_2
         private void damageP()
         {
             pHealth -= damageMul;
-            pHL.Text = "Pauline Health: " + pHealth;
+            pHL.Text = "Dragon Health: " + pHealth;
             pHealthPBX.Size = new Size(pHealth, 30);
             pHealthPBX.Location = new Point((pHealthPBX.Location.X + damageMul), pHealthPBX.Location.Y);
             this.Refresh();
@@ -131,9 +131,14 @@ namespace Game_2
         private void damageB()
         {
             bHealth -= 50;
-            bHL.Text = "Brewstor Health: " + bHealth;
+            bHL.Text = "Knight Health: " + bHealth;
             bHealthPBX.Size = new Size(bHealth, 30);
             this.Refresh();
+        }
+
+        private void BHL_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void Button1_Click(object sender, System.EventArgs e)

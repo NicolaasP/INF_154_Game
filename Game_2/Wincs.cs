@@ -23,5 +23,18 @@ namespace Game_2
         {
             Application.Exit();
         }
+
+        private void Wincs_Load(object sender, EventArgs e)
+        {
+            Credits.Text = "u19021306    Nicolaas Iván Pretorius\n" +
+                "u19034101    Alwyn Potgieter\n" +
+                "u19009756    Dries Moolman\n" +
+                "Andrew Nel";
+        }
+
+        private void Wincs_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
